@@ -17,8 +17,15 @@
 	<logger name="dev.console" level="INFO" additivity="false">
 		<appender-ref ref="FILE" />
 	</logger>
+
+	<!-- Possibilité de créer autant de loger souhaité avec un nom
+     Mais attention si nombreux logger nommés, risque en cas de renomage(s)-->
+	<logger name="toto" level="DEBUG">
+		<appender-ref ref="FILE" />
+	</logger>
 	<!-- regle de logs par defaut. Ici : niveau INFO vers la sortie standard -->
-	<root level="INFO">
+	<root level="DEBUG">
 		<appender-ref ref="STDOUT" />
 	</root>
+
 </configuration>
